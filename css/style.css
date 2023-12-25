@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 1076px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #252b42;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+}
+
+.desc {
+  color: #737373;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.text-wrap {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.text {
+  font-size: 30px;
+  padding: 15px;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.ghost {
+  font-size: 30px;
+  padding: 15px;
+  animation-name: ghost;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: max-content;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+@keyframes ghost {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: unset;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
